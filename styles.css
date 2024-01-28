@@ -70,20 +70,20 @@ body {
 
     h1 {
         color: white;
-        font-size: 30rem;
+        font-size: 20rem;
         font-weight: lighter;
         font-family: "Caveat";
     }
     h2 {
         color: white;
-        font-size: 15rem;
+        font-size: 7rem;
         font-weight: lighter;
         font-family: "Nunito";
         font-weight: bold;
     }
     p {
         color: white;
-        font-size: 7rem;
+        font-size: 5rem;
         font-family: "Nunito";
     }
     a {
