@@ -1,0 +1,131 @@
+/* .scrolling-wrapper {
+    position: fixed;    
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vw;
+    bottom: 0px;
+    left: 0px;
+    overflow-y: scroll;
+    z-index: 1;
+    transform: rotate(-90deg);
+}
+
+.card {
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: #a8a8df;
+    
+    transform: rotate(90deg);
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+
+    p {
+        text-align: center;
+    }
+
+} */
+
+.center {
+    margin: auto;
+    width: 60%;
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow:hidden;
+}
+
+@keyframes scroll {
+0% { transform: translateY(0); }
+100% { transform: translateY(-100%); }
+}
+
+.container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* -webkit-overflow-scrolling: touch; */
+    
+    scroll-snap-type: y proximity;
+
+    z-index: 1;
+    overflow: auto;
+    height: 99vh;
+
+    .item {
+        border: 5px black;
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+
+    h1 {
+        color: white;
+        font-size: 30rem;
+        font-weight: lighter;
+        font-family: "Caveat";
+    }
+    h2 {
+        color: white;
+        font-size: 15rem;
+        font-weight: lighter;
+        font-family: "Nunito";
+        font-weight: bold;
+    }
+    p {
+        color: white;
+        font-size: 7rem;
+        font-family: "Nunito";
+    }
+    a {
+        color: rgb(103, 177, 240);
+        text-decoration: none;
+    }
+}
+
+.dated-item {
+    display: inline-block;
+    padding: 20px;
+    margin-top: 70px;
+    .date {
+        float: left;
+        padding-right: 200px;
+        padding-left: 60px;
+        border-right: 10px solid white;
+    }
+    .location {
+        float: left;
+        padding-right: 200px;
+        padding-left: 200px;
+        border-right: 10px solid white;
+        p {
+            font-style: italic;
+        }
+    }
+    .event {
+        padding-left: 200px;
+        float: left;
+        width: auto;
+    }
+}
+
+.vertcent {
+    padding-top: 40vh;
+}
+
+.vertbuff {
+    padding-top: 10vh;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
