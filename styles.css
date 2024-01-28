@@ -114,8 +114,19 @@ body {
     .event {
         padding-left: 100px;
         float: left;
-        width: auto;
+        width: 50%;
     }
+}
+
+.left {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+.right {
+    width: 50%;
+    float: right;
+    height: 100%;
 }
 
 .vertcent {
