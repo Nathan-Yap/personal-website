@@ -70,20 +70,20 @@ body {
 
     h1 {
         color: white;
-        font-size: 20rem;
+        font-size: 8rem;
         font-weight: lighter;
         font-family: "Caveat";
     }
     h2 {
         color: white;
-        font-size: 7rem;
+        font-size: 5rem;
         font-weight: lighter;
         font-family: "Nunito";
         font-weight: bold;
     }
     p {
         color: white;
-        font-size: 5rem;
+        font-size: 2rem;
         font-family: "Nunito";
     }
     a {
@@ -98,21 +98,21 @@ body {
     margin-top: 70px;
     .date {
         float: left;
-        padding-right: 200px;
+        padding-right: 100px;
         padding-left: 60px;
         border-right: 10px solid white;
     }
     .location {
         float: left;
-        padding-right: 200px;
-        padding-left: 200px;
+        padding-right: 100px;
+        padding-left: 100px;
         border-right: 10px solid white;
         p {
             font-style: italic;
         }
     }
     .event {
-        padding-left: 200px;
+        padding-left: 100px;
         float: left;
         width: auto;
     }
