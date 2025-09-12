@@ -70,6 +70,73 @@
     /* subtle animations */
     .fade-in{animation:fade .6s ease both}
     @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+    /* Trigger styling */
+    .video-trigger {
+    display:inline-block;
+    cursor:pointer;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    padding:10px 16px;
+    border-radius:8px;
+    font-weight:600;
+    color:#032;
+    transition:transform .15s;
+    }
+    .video-trigger:hover { transform:scale(1.05); }
+
+    /* Modal overlay */
+    .modal {
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0; top:0; width:100%; height:100%;
+    background:rgba(0,0,0,0.75);
+    align-items:center; justify-content:center;
+    }
+    .modal-content {
+    position:relative;
+    width:80%; max-width:900px;
+    aspect-ratio:16/9;
+    background:#000;
+    border-radius:12px;
+    overflow:hidden;
+    }
+    .modal-content iframe {
+    width:100%; height:100%;
+    }
+    .modal .close {
+    position:absolute;
+    top:8px; right:12px;
+    font-size:28px; font-weight:bold;
+    color:#fff; cursor:pointer;
+    }
+    .tabs {
+    display:flex;
+    gap:10px;
+    margin-bottom:16px;
+    }
+
+    .tab-btn {
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:rgba(255,255,255,0.05);
+    color:var(--muted);
+    cursor:pointer;
+    font-weight:600;
+    transition:background .2s, color .2s;
+    }
+
+    .tab-btn.active {
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    color:#032;
+    }
+
+    .tab-content { display:none; }
+    .tab-content.active { display:block; }
+
+
   </style>
 </head>
 <body>
@@ -79,30 +146,31 @@
         <div class="logo">NY</div>
         <div>
           <div style="font-weight:700">Nathan Yap</div>
-          <div class="muted" style="font-size:13px">Software Engineer • Machine Learning • Computer Vision</div>
+          <div class="muted" style="font-size:13px">Software Engineering • Machine Learning</div>
         </div>
       </div>
       <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#publications">Publications</a>
+        <!-- <a href="#contact">Contact</a> -->
       </nav>
     </header>
 
     <main class="hero">
       <section class="card fade-in">
         <h1>Nathan Yap</h1>
-        <h3 class="muted">M.S.E. student & Software / ML Engineer — University of Michigan</h3>
+        <h3 class="muted">M.S.E. student — University of Michigan</h3>
         <p class="lead">I build practical ML systems and full-stack tools — from cloud data pipelines at AWS Incident Response to 3D pose estimation and AR applications. I enjoy making research producible and shipping clean, maintainable systems.</p>
 
-        <div class="section">
+        <!-- <div class="section">
           <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
             <a class="btn" href="#contact">Get in touch</a>
             <a class="chip" href="https://github.com/Nathan-Yap" target="_blank">GitHub — Nathan-Yap</a>
             <a class="chip" href="https://www.linkedin.com/in/nathan-yap-9b8301180/" target="_blank">LinkedIn</a>
           </div>
-        </div>
+        <div> -->
 
         <div class="section">
           <div style="font-weight:700;margin-bottom:8px">Key Skills</div>
@@ -111,8 +179,7 @@
             <div class="skill">PyTorch</div>
             <div class="skill">Django</div>
             <div class="skill">AWS (S3, Glue, Lambda)</div>
-            <div class="skill">Computer Vision</div>
-            <div class="skill">Vision Transformers</div>
+            <div class="skill">Machine Learning</div>
             <div class="skill">HTML/CSS/JS</div>
             <div class="skill">C++ / C#</div>
           </div>
@@ -149,71 +216,87 @@
     </section>
 
     <section id="experience" class="card section fade-in">
-      <h2>Experience</h2>
-      <div class="exp">
+    <h2>Experience</h2>
+
+    <!-- Tab buttons -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="industry">Industry</button>
+        <button class="tab-btn" data-tab="research">Research & Teaching</button>
+    </div>
+
+    <!-- Industry Experience -->
+    <div class="tab-content active" id="industry">
+        <div class="exp">
         <div class="exp-item">
-          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div style="display:flex;justify-content:space-between;align-items:start">
             <div>
-              <div style="font-weight:700">Amazon Web Services — Software Development Engineer Intern</div>
-              <div class="meta">May 2025 – Aug 2025 • Seattle, WA</div>
+                <div style="font-weight:700">Amazon Web Services — Software Development Engineer Intern</div>
+                <div class="meta">May 2025 – Aug 2025 • Seattle, WA</div>
             </div>
-          </div>
-          <ul class="muted" style="margin-top:8px">
+            </div>
+            <ul class="muted" style="margin-top:8px">
             <li>Built a data-lake architecture to cache alarming metric data during AWS SEV2 incidents using S3, Glue, DynamoDB and Lambda.</li>
             <li>Proposed ML analysis approaches to help engineers triage incidents faster.</li>
-          </ul>
+            </ul>
         </div>
 
         <div class="exp-item">
-          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div style="display:flex;justify-content:space-between;align-items:start">
             <div>
-              <div style="font-weight:700">SportsBoxAI — Machine Learning Intern</div>
-              <div class="meta">May 2024 – Aug 2024 • Bellevue, WA</div>
+                <div style="font-weight:700">SportsBoxAI — Machine Learning Intern</div>
+                <div class="meta">May 2024 – Aug 2024 • Bellevue, WA</div>
             </div>
-          </div>
-          <ul class="muted" style="margin-top:8px">
+            </div>
+            <ul class="muted" style="margin-top:8px">
             <li>Created a Django testing server to evaluate 3D pose estimation and visualize golf swing model accuracy.</li>
             <li>Generated language datasets from 11,000+ coach videos to fine-tune LLMs; experimented with ViT variants for semantic metrics.</li>
-          </ul>
+            </ul>
         </div>
 
         <div class="exp-item">
-          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div style="display:flex;justify-content:space-between;align-items:start">
             <div>
-              <div style="font-weight:700">LifeLong Learning Lab, Univ. of Michigan — Research Intern</div>
-              <div class="meta">Apr 2023 – Apr 2024 • Ann Arbor, MI</div>
+                <div style="font-weight:700">LightSphereAI — Backend Developer</div>
+                <div class="meta">Mar 2022 – Aug 2022 • Seattle, WA</div>
             </div>
-          </div>
-          <ul class="muted" style="margin-top:8px">
-            <li>Second author on a CSCW 2024 paper studying LLM-generated mind maps; optimized an API for 32% better efficiency.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div style="display:flex;justify-content:space-between;align-items:start">
-            <div>
-              <div style="font-weight:700">LightSphereAI — Backend Developer</div>
-              <div class="meta">Mar 2022 – Aug 2022 • Seattle, WA</div>
             </div>
-          </div>
-          <ul class="muted" style="margin-top:8px">
+            <ul class="muted" style="margin-top:8px">
             <li>Built an internal file-syncing tool with AWS S3 and Python scripts to reliably manage multi-TB datasets.</li>
-          </ul>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <!-- Research & Teaching Experience -->
+    <div class="tab-content" id="research">
+        <div class="exp">
+        <div class="exp-item">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+                <div style="font-weight:700">LifeLong Learning Lab, Univ. of Michigan — Research Intern</div>
+                <div class="meta">Apr 2023 – Apr 2024 • Ann Arbor, MI</div>
+            </div>
+            </div>
+            <ul class="muted" style="margin-top:8px">
+            <li>Second author on a CSCW 2024 paper studying LLM-generated mind maps; optimized an API for 32% better efficiency.</li>
+            </ul>
         </div>
 
         <div class="exp-item">
-          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div style="display:flex;justify-content:space-between;align-items:start">
             <div>
-              <div style="font-weight:700">NASA SUITS Challenge — AI Lead & Board Member</div>
-              <div class="meta">Sep 2022 – Present • Univ. of Michigan</div>
+                <div style="font-weight:700">NASA SUITS Challenge — AI Lead & Board Member</div>
+                <div class="meta">Sep 2022 – Present • Univ. of Michigan</div>
             </div>
-          </div>
-          <ul class="muted" style="margin-top:8px">
+            </div>
+            <ul class="muted" style="margin-top:8px">
             <li>Led a 12-person AI subteam to build a geosample classifier (YOLO) and a transformer-based intent classifier for astronaut voice commands; demoed at Johnson Space Center on HoloLens 2.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
+        </div>
+    </div>
     </section>
+
 
     <section id="projects" class="card section fade-in">
       <h2>Projects & Awards</h2>
@@ -222,6 +305,10 @@
           <div style="font-weight:700">Cosmocook / HoloLens Demo</div>
           <div class="muted">MHacks x Google — 1st place. Multimodal AR cooking assistant (Gemini 1.5, Unity, MRTK). Demo video linked in quick links.</div>
         </div>
+      </div>
+
+      <div class="video-trigger" data-video="https://www.youtube.com/embed/1LwnAezJcVE">
+        ▶ Watch Demo
       </div>
     </section>
 
@@ -252,14 +339,22 @@
       </div>
     </section>
 
-    <section id="contact" class="card section fade-in">
+    <!-- <section id="contact" class="card section fade-in">
       <h2>Contact</h2>
       <p class="muted">I'm open to internships and collaborations in ML, systems, and AR/vision. The quickest way to reach me is email.</p>
       <div style="margin-top:12px">
         <a class="btn" href="mailto:nyap@umich.edu">Email: nyap@umich.edu</a>
         <div style="margin-top:12px;color:var(--muted)">Or download my resume from the "assets" folder (replace with your hosting path): <code>assets/Nathan_Yap_Resume_09_2025.pdf</code></div>
       </div>
-    </section>
+    </section> -->
+
+    <!-- Modal overlay (place once at bottom of <body>) -->
+    <div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    </div>
 
     <footer>
       Built with HTML, CSS & JavaScript — feel free to fork and host on GitHub Pages.
@@ -279,6 +374,49 @@
 
     // small keyboard shortcut: press r to download resume (helpful while testing)
     window.addEventListener('keydown', (e)=>{ if(e.key==='r' || e.key==='R'){ window.location.href='assets/Nathan_Yap_Resume_09_2025.pdf'; } });
+
+    // Modal open/close logic
+    const modal = document.getElementById("videoModal");
+    const frame = document.getElementById("videoFrame");
+    const closeBtn = document.querySelector(".modal .close");
+
+    // Open modal when trigger clicked
+    document.querySelectorAll(".video-trigger").forEach(trigger => {
+    trigger.addEventListener("click", () => {
+        const videoUrl = trigger.getAttribute("data-video");
+        frame.src = videoUrl + "?autoplay=1";
+        modal.style.display = "flex";
+    });
+    });
+
+    // Close modal
+    closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    frame.src = ""; // stop video playback
+    });
+
+    // Close modal on outside click
+    window.addEventListener("click", e => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        frame.src = "";
+    }
+    });
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Switch active button
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Show corresponding tab
+        const tabId = btn.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(tc => {
+        tc.classList.remove('active');
+        if(tc.id === tabId) tc.classList.add('active');
+        });
+    });
+    });
+
   </script>
 </body>
 </html>
