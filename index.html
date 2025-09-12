@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+<body>
+
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nathan Yap — Software & ML Engineer</title>
+  <meta name="description" content="Nathan Yap — M.S.E. student & software/ML engineer. AWS intern, ML research, AR/vision projects." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7; --accent-2:#60a5fa; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px; --radius:14px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#041021 0%, #071428 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:700;color:#032;box-shadow:0 6px 18px rgba(6,22,42,0.6)}
+    nav a{margin-left:18px;color:var(--muted)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+
+    h1{margin:0;font-size:clamp(28px,4vw,36px)}
+    h3{margin:6px 0;color:var(--muted);font-weight:500}
+    p.lead{color:var(--muted);line-height:1.5}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted);font-size:14px}
+
+    .side-hr{height:1px;background:rgba(255,255,255,0.03);margin:14px 0;border-radius:4px}
+    .section{margin-top:22px}
+    .exp{display:flex;flex-direction:column;gap:12px}
+    .exp-item{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01)}
+    .meta{color:var(--muted);font-size:13px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+
+    footer{margin-top:36px;color:var(--muted);text-align:center;font-size:14px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+    }
+
+    /* small utilities */
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#032;font-weight:700}
+    .muted{color:var(--muted)}
+
+    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01)}
+
+    /* subtle animations */
+    .fade-in{animation:fade .6s ease both}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="fade-in">
+      <div class="brand">
+        <div class="logo">NY</div>
+        <div>
+          <div style="font-weight:700">Nathan Yap</div>
+          <div class="muted" style="font-size:13px">Software Engineer • Machine Learning • Computer Vision</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card fade-in">
+        <h1>Nathan Yap</h1>
+        <h3 class="muted">M.S.E. student & Software / ML Engineer — University of Michigan</h3>
+        <p class="lead">I build practical ML systems and full-stack tools — from cloud data pipelines at AWS Incident Response to 3D pose estimation and AR applications. I enjoy making research producible and shipping clean, maintainable systems.</p>
+
+        <div class="section">
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <a class="btn" href="#contact">Get in touch</a>
+            <a class="chip" href="https://github.com/Nathan-Yap" target="_blank">GitHub — Nathan-Yap</a>
+            <a class="chip" href="https://www.linkedin.com/in/nathan-yap-9b8301180/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="section">
+          <div style="font-weight:700;margin-bottom:8px">Key Skills</div>
+          <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">PyTorch</div>
+            <div class="skill">Django</div>
+            <div class="skill">AWS (S3, Glue, Lambda)</div>
+            <div class="skill">Computer Vision</div>
+            <div class="skill">Vision Transformers</div>
+            <div class="skill">HTML/CSS/JS</div>
+            <div class="skill">C++ / C#</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div style="font-weight:700;margin-bottom:8px">Education</div>
+          <div class="muted">University of Michigan — B.S.E. Computer Science (2022–2025), M.S.E. in progress (2025–2026)</div>
+        </div>
+      </section>
+
+      <aside class="card fade-in">
+        <div style="font-weight:700">Contact</div>
+        <div class="contact-list">
+          <div class="chip">Email: <a href="mailto:nyap@umich.edu">nyap@umich.edu</a></div>
+          <div class="chip">Phone: 425-233-9886</div>
+          <div class="chip">Location: Sammamish, WA</div>
+          <div class="chip">Resume: <a href="assets/Nathan_Yap_Resume_09_2025.pdf" download>Download PDF</a></div>
+        </div>
+
+        <div class="side-hr"></div>
+        <div style="font-weight:700">Quick Links</div>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+          <a class="muted" href="https://youtu.be/1LwnAezJcVE?si=jC_Gupw2KKG0hvGt" target="_blank">Demo: Cosmocook / HoloLens</a>
+          <a class="muted" href="https://github.com/Nathan-Yap" target="_blank">GitHub</a>
+          <a class="muted" href="https://www.linkedin.com/in/nathan-yap-9b8301180/" target="_blank">LinkedIn</a>
+        </div>
+      </aside>
+    </main>
+
+    <section id="about" class="card section fade-in">
+      <h2>About</h2>
+      <p class="muted">I'm Nathan — I work at the intersection of systems engineering and machine learning. My experience includes building cloud data-lakes and pipelines for incident response at AWS, designing ML-driven evaluation servers for 3D pose estimation, and shipping AR/ML prototypes. I prioritize shipping reproducible research and maintainable systems.</p>
+    </section>
+
+    <section id="experience" class="card section fade-in">
+      <h2>Experience</h2>
+      <div class="exp">
+        <div class="exp-item">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <div style="font-weight:700">Amazon Web Services — Software Development Engineer Intern</div>
+              <div class="meta">May 2025 – Aug 2025 • Seattle, WA</div>
+            </div>
+          </div>
+          <ul class="muted" style="margin-top:8px">
+            <li>Built a data-lake architecture to cache alarming metric data during AWS SEV2 incidents using S3, Glue, DynamoDB and Lambda.</li>
+            <li>Proposed ML analysis approaches to help engineers triage incidents faster.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <div style="font-weight:700">SportsBoxAI — Machine Learning Intern</div>
+              <div class="meta">May 2024 – Aug 2024 • Bellevue, WA</div>
+            </div>
+          </div>
+          <ul class="muted" style="margin-top:8px">
+            <li>Created a Django testing server to evaluate 3D pose estimation and visualize golf swing model accuracy.</li>
+            <li>Generated language datasets from 11,000+ coach videos to fine-tune LLMs; experimented with ViT variants for semantic metrics.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <div style="font-weight:700">LifeLong Learning Lab, Univ. of Michigan — Research Intern</div>
+              <div class="meta">Apr 2023 – Apr 2024 • Ann Arbor, MI</div>
+            </div>
+          </div>
+          <ul class="muted" style="margin-top:8px">
+            <li>Second author on a CSCW 2024 paper studying LLM-generated mind maps; optimized an API for 32% better efficiency.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <div style="font-weight:700">LightSphereAI — Backend Developer</div>
+              <div class="meta">Mar 2022 – Aug 2022 • Seattle, WA</div>
+            </div>
+          </div>
+          <ul class="muted" style="margin-top:8px">
+            <li>Built an internal file-syncing tool with AWS S3 and Python scripts to reliably manage multi-TB datasets.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <div style="font-weight:700">NASA SUITS Challenge — AI Lead & Board Member</div>
+              <div class="meta">Sep 2022 – Present • Univ. of Michigan</div>
+            </div>
+          </div>
+          <ul class="muted" style="margin-top:8px">
+            <li>Led a 12-person AI subteam to build a geosample classifier (YOLO) and a transformer-based intent classifier for astronaut voice commands; demoed at Johnson Space Center on HoloLens 2.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card section fade-in">
+      <h2>Projects & Awards</h2>
+      <div class="project-grid">
+        <div class="project">
+          <div style="font-weight:700">Cosmocook / HoloLens Demo</div>
+          <div class="muted">MHacks x Google — 1st place. Multimodal AR cooking assistant (Gemini 1.5, Unity, MRTK). Demo video linked in quick links.</div>
+        </div>
+        <div class="project">
+          <div style="font-weight:700">DUSt3R-based 3D reconstruction</div>
+          <div class="muted">Pipeline for combining many video sources into a single 3D reconstruction to support forensic analysis and review of CCTV footage.</div>
+        </div>
+        <div class="project">
+          <div style="font-weight:700">VEGA — Scene understanding research</div>
+          <div class="muted">ML research integrating intent classifiers, speech-to-text, and AR egress panel tracking for an assistive cooking scenario.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section fade-in">
+      <h2>Technical / Coursework</h2>
+      <div class="muted">Selected coursework: Data Structures, Algorithms, Computer Vision, NLP, Machine Learning, OS, GPU Programming, Science of LLMs, ML Research.</div>
+      <div style="margin-top:12px" class="skills">
+        <div class="skill">Python</div><div class="skill">C++</div><div class="skill">PyTorch</div><div class="skill">Django</div>
+        <div class="skill">AWS</div><div class="skill">Unity / MRTK</div><div class="skill">HTML/CSS/JS</div>
+      </div>
+    </section>
+
+    <section id="contact" class="card section fade-in">
+      <h2>Contact</h2>
+      <p class="muted">I'm open to internships and collaborations in ML, systems, and AR/vision. The quickest way to reach me is email.</p>
+      <div style="margin-top:12px">
+        <a class="btn" href="mailto:nyap@umich.edu">Email: nyap@umich.edu</a>
+        <div style="margin-top:12px;color:var(--muted)">Or download my resume from the "assets" folder (replace with your hosting path): <code>assets/Nathan_Yap_Resume_09_2025.pdf</code></div>
+      </div>
+    </section>
+
+    <footer>
+      Built with HTML, CSS & JavaScript — feel free to fork and host on GitHub Pages.
+    </footer>
+  </div>
+
+  <script>
+    // smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+
+    // small keyboard shortcut: press r to download resume (helpful while testing)
+    window.addEventListener('keydown', (e)=>{ if(e.key==='r' || e.key==='R'){ window.location.href='assets/Nathan_Yap_Resume_09_2025.pdf'; } });
+  </script>
+</body>
+</html>
