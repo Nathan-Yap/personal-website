@@ -138,6 +138,24 @@
     .tab-content.active { display:block; }
 
 
+    #pdfModal iframe {
+      width: 100%;
+      height: 90vh; /* large height for readability */
+      border: none;
+    }
+    .pdf-trigger {
+    display:inline-block;
+    cursor:pointer;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    padding:10px 16px;
+    margin-top: 15px;
+    border-radius:8px;
+    font-weight:600;
+    color:#032;
+    transition:transform .15s;
+    }
+    .pdf-trigger:hover { transform:scale(1.05); }
+
   </style>
 </head>
 <body>
@@ -198,7 +216,9 @@
           <div class="chip">Email: <a href="mailto:nyap@umich.edu">nyap@umich.edu</a></div>
           <div class="chip">Phone: 425-233-9886</div>
           <div class="chip">Location: Sammamish, WA</div>
-          <div class="chip">Resume: <a href="assets/Nathan_Yap_Resume_09_2025.pdf" download>Download PDF</a></div>
+          <button class="pdf-trigger" data-pdf="assets/Nathan_Yap_Resume_09_2025.pdf">
+            View Resume
+          </button>
         </div>
 
         <div class="side-hr"></div>
@@ -406,17 +426,29 @@
         <li>Data Structures (EECS 280)</li>
         <li>Algorithms (EECS 281)</li>
         <li>Computer Organization (EECS 370)</li>
-        <li>Computer Vision (EECS 442)</li>
+        <li>Computer Vision (EECS 442)
+          <button class="pdf-trigger" data-pdf="assets/EECS442_Project__1_.pdf">
+            Final Project
+          </button>
+        </li>
         <li>Intro Machine Learning (EECS 445) + TA</li>
         <li>Operating Systems (EECS 482 6cr)</li>
         <li>Databases (EECS 484)</li>
         <li>Intro to Cryptography (EECS 475)</li>
         <li>GPU Programming (EECS 471)</li>
-        <li>Science of LLMs (CSE 598)</li>
-        <li>ML Research Experience (EECS 498)</li>
+        <li>Science of LLMs (CSE 598)
+          <button class="pdf-trigger" data-pdf="assets/EECS_598_Project.pdf">
+            Final Project
+          </button>
+        </li>
+        <li>ML Research Experience (EECS 498) + GSI
+          <button class="pdf-trigger" data-pdf="assets/EECS_498_final_paper.pdf">
+            Final Project
+          </button>
+        </li>
         <li>Foundations of Artificial Intelligence (CSE 592)</li>
         <li>Advanced Compilers (CSE 583)</li>
-        <li>Advanced Scalable Systems for GenAI (CSE 585</li>
+        <li>Advanced Scalable Systems for GenAI (CSE 585)</li>
       </ul>
     </div>
     <div style="margin-top:12px" class="skills">
@@ -442,8 +474,16 @@
     </div>
     </div>
 
+    <!-- PDF Modal overlay -->
+    <div id="pdfModal" class="modal">
+      <div class="modal-content">
+        <span class="close pdf-close">&times;</span>
+        <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+
     <footer>
-      Built with HTML, CSS & JavaScript — feel free to fork and host on GitHub Pages.
+      Built with HTML, CSS & JavaScript — Hosted on GitHub Pages.
     </footer>
   </div>
 
@@ -502,6 +542,35 @@
         });
     });
     });
+
+    // PDF modal logic
+    const pdfModal = document.getElementById("pdfModal");
+    const pdfFrame = document.getElementById("pdfFrame");
+    const pdfCloseBtn = document.querySelector(".pdf-close");
+
+    // Open modal when trigger clicked
+    document.querySelectorAll(".pdf-trigger").forEach(trigger => {
+      trigger.addEventListener("click", () => {
+        const pdfUrl = trigger.getAttribute("data-pdf");
+        pdfFrame.src = pdfUrl;
+        pdfModal.style.display = "flex";
+      });
+    });
+
+    // Close modal
+    pdfCloseBtn.addEventListener("click", () => {
+      pdfModal.style.display = "none";
+      pdfFrame.src = ""; // clear src so it unloads
+    });
+
+    // Close on outside click
+    window.addEventListener("click", e => {
+      if (e.target === pdfModal) {
+        pdfModal.style.display = "none";
+        pdfFrame.src = "";
+      }
+    });
+
 
   </script>
 </body>
