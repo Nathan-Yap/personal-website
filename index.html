@@ -77,6 +77,7 @@
     cursor:pointer;
     background:linear-gradient(90deg,var(--accent),var(--accent-2));
     padding:10px 16px;
+    margin-top: 15px;
     border-radius:8px;
     font-weight:600;
     color:#032;
@@ -162,7 +163,7 @@
       <section class="card fade-in">
         <h1>Nathan Yap</h1>
         <h3 class="muted">M.S.E. student — University of Michigan</h3>
-        <p class="lead">I build practical ML systems and full-stack tools — from cloud data pipelines at AWS Incident Response to 3D pose estimation and AR applications. I enjoy making research producible and shipping clean, maintainable systems.</p>
+        <p class="lead">Currently looking for full-time SWE or MLE roles!</p>
 
         <!-- <div class="section">
           <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
@@ -187,7 +188,7 @@
 
         <div class="section">
           <div style="font-weight:700;margin-bottom:8px">Education</div>
-          <div class="muted">University of Michigan — B.S.E. Computer Science (2022–2025), M.S.E. in progress (2025–2026)</div>
+          <div class="muted">University of Michigan — M.S.E. in progress (2025–2026) <br> University of Michigan — B.S.E. Computer Science (2022–2025) </div>
         </div>
       </section>
 
@@ -203,16 +204,16 @@
         <div class="side-hr"></div>
         <div style="font-weight:700">Quick Links</div>
         <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
-          <a class="muted" href="https://youtu.be/1LwnAezJcVE?si=jC_Gupw2KKG0hvGt" target="_blank">Demo: Cosmocook / HoloLens</a>
-          <a class="muted" href="https://github.com/Nathan-Yap" target="_blank">GitHub</a>
           <a class="muted" href="https://www.linkedin.com/in/nathan-yap-9b8301180/" target="_blank">LinkedIn</a>
+          <a class="muted" href="https://github.com/Nathan-Yap" target="_blank">GitHub</a>
+          <a class="muted" href="https://scholar.google.com/citations?user=ed40qL0AAAAJ&hl=en" target="_blank">Google Scholar</a>
         </div>
       </aside>
     </main>
 
     <section id="about" class="card section fade-in">
       <h2>About</h2>
-      <p class="muted">I'm Nathan — I work at the intersection of systems engineering and machine learning. My experience includes building cloud data-lakes and pipelines for incident response at AWS, designing ML-driven evaluation servers for 3D pose estimation, and shipping AR/ML prototypes. I prioritize shipping reproducible research and maintainable systems.</p>
+      <p class="muted">I'm Nathan — I love exploring the intersection of systems engineering and machine learning. My experience includes building cloud data-lakes and pipelines for incident response at AWS, designing ML-driven evaluation servers for 3D pose estimation, and building fun projects at Hackathons.</p>
     </section>
 
     <section id="experience" class="card section fade-in">
@@ -222,6 +223,7 @@
     <div class="tabs">
         <button class="tab-btn active" data-tab="industry">Industry</button>
         <button class="tab-btn" data-tab="research">Research & Teaching</button>
+        <button class="tab-btn" data-tab="student-orgs">Student Organizations</button>
     </div>
 
     <!-- Industry Experience -->
@@ -249,7 +251,20 @@
             </div>
             <ul class="muted" style="margin-top:8px">
             <li>Created a Django testing server to evaluate 3D pose estimation and visualize golf swing model accuracy.</li>
-            <li>Generated language datasets from 11,000+ coach videos to fine-tune LLMs; experimented with ViT variants for semantic metrics.</li>
+            <li>Generated language datasets from 11,000+ coach videos to fine-tune VLMs; experimented with ViT variants for semantic metrics.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+                <div style="font-weight:700">Jobfair — Backend Engineering Intern</div>
+                <div class="meta">May 2024 – Aug 2024 • LA, CA</div>
+            </div>
+            </div>
+            <ul class="muted" style="margin-top:8px">
+            <li>Created SQL migration scripts for a Postgres database of 30,000 resumes and voice memos.</li>
+            <li>Optimized a Django backend to have a 95% decrease in memory usage and a 98% reduction in query runtime by improving database joins.</li>
             </ul>
         </div>
 
@@ -261,7 +276,8 @@
             </div>
             </div>
             <ul class="muted" style="margin-top:8px">
-            <li>Built an internal file-syncing tool with AWS S3 and Python scripts to reliably manage multi-TB datasets.</li>
+            <li>Built an internal file-syncing tool with AWS S3 to reliably manage multi-TB data transfer.</li>
+            <li>Implemented part-file upload and failure redundancies.</li>
             </ul>
         </div>
         </div>
@@ -278,10 +294,42 @@
             </div>
             </div>
             <ul class="muted" style="margin-top:8px">
-            <li>Second author on a CSCW 2024 paper studying LLM-generated mind maps; optimized an API for 32% better efficiency.</li>
+            <li>Second author on a CSCW paper studying LLM-generated mind maps</li>
+            <li>Fourth author on a CSCW paper studying AI note taking interventions</li>
+            <li>Lead a project in partnership with Ann Arbor public schools to digitize a simulation for K-12 students. <a href="https://cse.engin.umich.edu/stories/cse-team-brings-history-to-life-for-local-middle-schoolers/" target="_blank">Featured in this article</a></li>
             </ul>
         </div>
 
+        <div class="exp-item">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+                <div style="font-weight:700">EECS 498 Machine Learning Research Experience — Graduate Student Instructor</div>
+                <div class="meta">Sep 2025 – Present • Univ. of Michigan</div>
+            </div>
+            </div>
+            <ul class="muted" style="margin-top:8px">
+            <li>Acting as the lead GSI for a seminar class, covering core machine learning research papers.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+                <div style="font-weight:700">EECS 445 Intro to Machine Learning — Instructional Aid</div>
+                <div class="meta">Sep 2024 – May 2025 • Univ. of Michigan</div>
+            </div>
+            </div>
+            <ul class="muted" style="margin-top:8px">
+            <li>Developed curriculum on core ML concepts, such as SVMs, NN/CNN/RNNs, Difussion, and Transformers/ViT</li>
+            </ul>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Student Organizations -->
+    <div class="tab-content" id="student-orgs">
+        <div class="exp">
         <div class="exp-item">
             <div style="display:flex;justify-content:space-between;align-items:start">
             <div>
@@ -290,7 +338,10 @@
             </div>
             </div>
             <ul class="muted" style="margin-top:8px">
-            <li>Led a 12-person AI subteam to build a geosample classifier (YOLO) and a transformer-based intent classifier for astronaut voice commands; demoed at Johnson Space Center on HoloLens 2.</li>
+            <li>Led a 12-person AI subteam to build a CV geosample classifier and a transformer-based intent classifier for astronaut voice commands; demoed at Johnson Space Center on HoloLens 2.</li>
+            <div class="video-trigger" data-video="https://www.youtube.com/embed/khfSNgq8GvQ">
+              ▶ 2024 Demo Video
+            </div>
             </ul>
         </div>
         </div>
@@ -302,14 +353,31 @@
       <h2>Projects & Awards</h2>
       <div class="project-grid">
         <div class="project">
-          <div style="font-weight:700">Cosmocook / HoloLens Demo</div>
-          <div class="muted">MHacks x Google — 1st place. Multimodal AR cooking assistant (Gemini 1.5, Unity, MRTK). Demo video linked in quick links.</div>
+          <div style="font-weight:700">Cosmocook</div>
+          <div class="muted">MHacks x Google — 1st place. Multimodal AR cooking assistant (Gemini 1.5, Unity, MRTK).</div>
+          <div class="muted"><a href="https://devpost.com/software/cosmocook" target="_blank">Devpost</a></div>
+          <div class="video-trigger" data-video="https://www.youtube.com/embed/1LwnAezJcVE">
+            ▶ Watch Demo
+          </div>
+        </div>
+        <div class="project">
+          <div style="font-weight:700">Bayleaf</div>
+          <div class="muted">AI-enabled cooking app. Fine-tuned a VLM for counting ingredients from an image</div>
+          <div class="muted"><a href="https://devpost.com/software/cosmocook-i3lhfo" target="_blank">Devpost</a></div>
+          <div class="video-trigger" data-video="https://www.youtube.com/embed/rCjOo_JMqpw">
+            ▶ Watch Demo
+          </div>
+        </div>
+        <div class="project">
+          <div style="font-weight:700">SNAP-cam</div>
+          <div class="muted">3D reconstruction and rendering from security camera footage.</div>
+          <div class="muted"><a href="https://devpost.com/software/cosmocam" target="_blank">Devpost</a></div>
+          <div class="video-trigger" data-video="https://www.youtube.com/embed/K54GGxPpn18">
+            ▶ Watch Demo
+          </div>
         </div>
       </div>
 
-      <div class="video-trigger" data-video="https://www.youtube.com/embed/1LwnAezJcVE">
-        ▶ Watch Demo
-      </div>
     </section>
 
     <section id="publications" class="card section fade-in">
@@ -317,11 +385,11 @@
         <div class="project-grid">
         <div class="project">
             <div style="font-weight:700">COVID-19 activity risk calculator as a gamified public health intervention tool</div>
-            <div class="muted">Shreyasvi Natraj, Malhar Bhide, Nathan Yap, et al. <em>Scientific Reports</em>, 2023. <a href="https://www.nature.com/articles/s41598-023-40223-x" target="_blank">Read more</a></div>
+            <div class="muted">Shreyasvi Natraj, Malhar Bhide, Nathan Yap, et al. <em>Scientific Reports</em>, 2023. <a href="https://www.nature.com/articles/s41598-023-40338-8" target="_blank">Read more</a></div>
         </div>
         <div class="project">
                 <div style="font-weight:700">MeetMap: Real-Time Collaborative Dialogue Mapping with LLMs in Online Meetings</div>
-                <div class="muted">Xinyue Chen, Nathan Yap, Xinyi Lu, Aylin Gunal, Xu Wang. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 2025. <a href="https://dl.acm.org/doi/10.1145/3688205" target="_blank">Read more</a></div>
+                <div class="muted">Xinyue Chen, Nathan Yap, Xinyi Lu, Aylin Gunal, Xu Wang. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 2025. <a href="https://dl.acm.org/doi/abs/10.1145/3711030" target="_blank">Read more</a></div>
         </div>
             <div class="project">
                 <div style="font-weight:700">More AI Assistance Reduces Cognitive Engagement: Examining the AI Assistance Dilemma in AI-Supported Note-Taking</div>
@@ -330,16 +398,34 @@
         </div>
     </section>
 
-    <section class="card section fade-in">
-      <h2>Technical / Coursework</h2>
-      <div class="muted">Selected coursework: Data Structures, Algorithms, Computer Vision, NLP, Machine Learning, OS, GPU Programming, Science of LLMs, ML Research.</div>
-      <div style="margin-top:12px" class="skills">
-        <div class="skill">Python</div><div class="skill">C++</div><div class="skill">PyTorch</div><div class="skill">Django</div>
-        <div class="skill">AWS</div><div class="skill">Unity / MRTK</div><div class="skill">HTML/CSS/JS</div>
-      </div>
-    </section>
+  <section class="card section fade-in">
+    <h2>Technical Skills / Coursework</h2>
+    <div class="muted">
+      <p>Completed/In-progress coursework:</p>
+      <ul>
+        <li>Data Structures (EECS 280)</li>
+        <li>Algorithms (EECS 281)</li>
+        <li>Computer Organization (EECS 370)</li>
+        <li>Computer Vision (EECS 442)</li>
+        <li>Intro Machine Learning (EECS 445) + TA</li>
+        <li>Operating Systems (EECS 482 6cr)</li>
+        <li>Databases (EECS 484)</li>
+        <li>Intro to Cryptography (EECS 475)</li>
+        <li>GPU Programming (EECS 471)</li>
+        <li>Science of LLMs (CSE 598)</li>
+        <li>ML Research Experience (EECS 498)</li>
+        <li>Foundations of Artificial Intelligence (CSE 592)</li>
+        <li>Advanced Compilers (CSE 583)</li>
+        <li>Advanced Scalable Systems for GenAI (CSE 585</li>
+      </ul>
+    </div>
+    <div style="margin-top:12px" class="skills">
+      <div class="skill">Python</div><div class="skill">C++</div><div class="skill">PyTorch</div><div class="skill">Django</div>
+      <div class="skill">AWS</div><div class="skill">Unity / MRTK</div><div class="skill">HTML/CSS/JS</div>
+    </div>
+  </section>
 
-    <!-- <section id="contact" class="card section fade-in">
+   <!-- <section id="contact" class="card section fade-in">
       <h2>Contact</h2>
       <p class="muted">I'm open to internships and collaborations in ML, systems, and AR/vision. The quickest way to reach me is email.</p>
       <div style="margin-top:12px">
