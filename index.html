@@ -271,7 +271,10 @@
             </div>
             <ul class="muted" style="margin-top:8px">
             <li>Created a Django testing server to evaluate 3D pose estimation and visualize golf swing model accuracy.</li>
-            <li>Generated language datasets from 11,000+ coach videos to fine-tune VLMs; experimented with ViT variants for semantic metrics.</li>
+            <li>Generated language datasets from 11,000+ coach videos to fine-tune LLMs; experimented with ViT variants for semantic metrics.</li>
+            <div class="video-trigger" data-video="https://www.youtube.com/embed/mluOWlA6GGo" embed_attributes="&start=1402">
+              ▶ Steph Curry and Bryson DeChambeau using the feature I prototyped
+            </div>
             </ul>
         </div>
 
@@ -510,7 +513,8 @@
     document.querySelectorAll(".video-trigger").forEach(trigger => {
     trigger.addEventListener("click", () => {
         const videoUrl = trigger.getAttribute("data-video");
-        frame.src = videoUrl + "?autoplay=1";
+        const embed_attributes = trigger.getAttribute("embed_attributes");
+        frame.src = videoUrl + "?autoplay=1" + (embed_attributes ? embed_attributes : "");
         modal.style.display = "flex";
     });
     });
